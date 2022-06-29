@@ -1,0 +1,67 @@
+.card {
+    height: 550px;
+    width: 100%;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+    padding: 2px;
+    border: 2px solid #E9DAC1;
+    border-radius: 15px;
+}
+
+.card-details {
+    font-family: 'Alef', sans-serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.card-text {
+    font-family: 'Alef', sans-serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #54BAB9
+}
+
+span {
+    color: #125B50;
+}
+
+.container {
+    display: flex;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    padding: 15px;
+    display: felx;
+}
+
+button img {
+    object-fit: cover;
+}
+
+.action btn {
+    display: flex;
+    margin: 25px;
+    padding: 25px;
+    align-items: flex-start;
+    height: 15px;
+}
+
+.space {
+    width: 4px;
+    height: auto;
+    display: inline-block
+}

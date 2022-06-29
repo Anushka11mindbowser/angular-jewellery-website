@@ -1,0 +1,150 @@
+<!-- <div class="row">
+
+    <div class="col" onclick="redirect()" *ngFor="let bracelet of Bracelets ">
+        <img [src]="bracelet.image" alt="">
+        <br>
+        <p>{{bracelet.name}}</p>
+    </div>
+</div> -->
+<div id="grid-jewel">
+    <div class="title">
+        CHIC JEWELLERY
+    </div>
+
+    <div class="card-head">
+        <div class="card-body">
+            <img src="https://assets.cltstatic.com/images/responsive/DefaultBanner_Desktop.webp">
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md-3">
+            <br>
+            <div class="name">
+                BRACELETS
+            </div>
+            <div class="product-card" *ngFor="let bracelet of Bracelets">
+                <img [src]="bracelet.image">
+
+                <br>
+                <div class="info">
+                    <p>
+
+                        {{bracelet.name}}
+                        <br>Rs. {{bracelet.dp}}
+
+                    </p>
+                </div>
+                <div class="action">
+                    <a>
+                        <img src="/assets/wishlist.png">
+                        <!-- <p>Add to wishlist</p> -->
+                    </a>
+
+                    <a>
+                        <img src="/assets/shop.png">
+                        <!-- <p>Add to cart</p> -->
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <br>
+            <div class="name">
+                NECKLACES
+            </div>
+            <div class="product-card" *ngFor="let necklace of Necklaces">
+                <img [src]="necklace.image">
+                <br>
+                <div class="info">
+                    <p>
+
+                        {{necklace.name}}
+                        <br>Rs. {{necklace.dp}}
+
+                    </p>
+                </div>
+                <div class="action">
+                    <a>
+                        <img src="/assets/wishlist.png">
+                        <!-- <p>Add to wishlist</p> -->
+                    </a>
+
+                    <a>
+                        <img src="/assets/shop.png">
+                        <!-- <p>Add to cart</p> -->
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <br>
+            <div class="name">
+                EARRINGS
+            </div>
+
+            <div class="product-card" *ngFor="let earring of Earrings">
+
+                <img [src]="earring.image">
+
+                <br>
+                <div class="info">
+                    <p>
+
+                        {{earring.name}}
+                        <br>Rs. {{earring.dp}}
+
+                    </p>
+                </div>
+                <div class="action">
+                    <a>
+                        <img src="/assets/wishlist.png">
+                        <!-- <p>Add to wishlist</p> -->
+                    </a>
+
+                    <a>
+                        <img src="/assets/shop.png">
+                        <!-- <p>Add to cart</p> -->
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <br>
+            <div class="name">
+                RINGS
+            </div>
+
+            <div class="product-card" *ngFor="let ring of Rings">
+
+                <img [src]="ring.image">
+                <br>
+
+                <div class="info">
+                    <p>
+
+                        {{ring.name}}
+                        <br>Rs. {{ring.dp}}
+
+                    </p>
+                </div>
+                <div class="action">
+                    <a>
+                        <img src="/assets/wishlist.png">
+                        <!-- <p>Add to wishlist</p> -->
+                    </a>
+
+                    <a>
+                        <img src="/assets/shop.png">
+                        <!-- <p>Add to cart</p> -->
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

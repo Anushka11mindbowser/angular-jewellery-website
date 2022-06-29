@@ -1,0 +1,42 @@
+<div class="card-head">
+    <div class="card-body">
+        <img src="https://banner.caratlane.com/live-images/4ff23bfddfe445dbaea06618a3fe0fc9.webp">
+    </div>
+</div>
+<br>
+
+<div class="row">
+
+    <div class="col-3" onclick="redirect()" *ngFor="let bracelet of Bracelets ">
+        <br>
+        <div class="product-card">
+            <img [src]="bracelet.image">
+
+            <br>
+            <div class="info">
+                <p>
+
+                    <br>Name: {{bracelet.name}}
+                    <br>Rs. {{bracelet.dp}}
+                    <br> Description: {{bracelet.note}}
+
+
+
+                </p>
+            </div>
+
+
+            <button class="btn btn-primary" (click)="goToBracelet(bracelet)">View Details</button>
+            <br>
+            <br>
+            <div class="action">
+                <button class="btn btn-warning" (click)="wishlist(bracelet)"><i class="fa-solid fa-heart"></i></button>
+                <div class="space"></div>
+                <button class="btn btn-warning" (click)="cart(bracelet)"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

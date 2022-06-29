@@ -1,0 +1,22 @@
+<div class="row">
+
+    <div class="col-3" onclick="redirect()" *ngFor="let wl of wishlist ">
+        <br>
+        <div class="product-card">
+            <img [src]="wl.image">
+
+            <br>
+            <div class="info">
+                <p>
+
+                    <br>Name: {{wl.name}}
+                    <br>Rs. {{wl.dp}}
+                    <br> Description: {{wl.note}}
+
+
+
+                </p>
+            </div>
+        </div>
+        <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+    </div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+
+
+        <div class="card-body">
+            <h5 class="card-title">Details</h5>
+            <h6>{{singleEarring.name}}</h6>
+            <p class="card-text">Original Price: <span>{{singleEarring.op}}</span></p>
+            <p class="card-text">Discounted Price: <span> {{singleEarring.dp}}</span></p>
+            <p class="card-text">Length: <span>{{singleEarring.length}}</span> long</p>
+            <p class="card-text">Weight: <span>{{singleEarring.weight}}</span></p>
+            <p class="card-text">Material: <span>{{singleEarring.materials}}</span></p>
+            <p class="card-text">Description: <span>{{singleEarring.note}}</span>
+            </p>
+            <p class="card-text"> Need Another Reason to buy it? <span> {{singleEarring.offers}}</span></p>
+
+            <a href="#" class="btn btn-primary">Home</a>
+
+
+
+            <div class="action">
+                <button class="btn btn-warning" (click)="wishlist(singleEarring)"><i class="fa-solid fa-heart"></i></button>
+                <div class="space"></div>
+                <button class="btn btn-warning" (click)="cart(singleEarring)"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" [src]="singleEarring.image" alt="">
+
+        </div>
+    </div>

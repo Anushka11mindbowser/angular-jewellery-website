@@ -1,0 +1,51 @@
+<div class="card-head">
+    <div class="card-body">
+        <img src="https://banner.caratlane.com/live-images/a9fc9031a004467099a8f04722c3773e.webp">
+    </div>
+</div>
+<br>
+
+<div class="row">
+
+    <div class="col-3" onclick="redirect()" *ngFor="let earring of Earrings ">
+        <br>
+        <div class="product-card">
+            <img [src]="earring.image">
+
+            <br>
+            <div class="info">
+                <p>
+
+                    <br>Name: {{earring.name}}
+                    <br>Rs. {{earring.e_dp}}
+                    <br> Description: {{earring.note}}
+
+
+
+                </p>
+            </div>
+            <button class="btn btn-primary" (click)="goToEarrings(earring)">View Details</button>
+
+            <br>
+            <br>
+            <div class="action">
+                <button class="btn btn-warning"><i class="fa-solid fa-heart"></i></button>
+                <div class="space"></div>
+                <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+
+            <!-- 
+            <div class="action">
+                <a (click)="wishlist(earring)">
+                    <img src="/assets/wishlist.png" alt="Add to wishlist">
+
+                </a>
+
+                <a (click)="cart(earring)">
+                    <img src="/assets/shop.png" alt="Add to cart">
+
+                </a> -->
+
+        </div>
+    </div>
+</div>

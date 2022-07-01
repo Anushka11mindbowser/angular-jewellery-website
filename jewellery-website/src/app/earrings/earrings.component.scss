@@ -13,11 +13,19 @@ img {
     margin: 7px;
 }
 
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    color: #363062;
-    text-align: center;
+.product-card p {
+    font-family: 'Chivo', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    color: #BB9F06;
+    text-align: left;
+}
+
+.product-card span {
+    font-family: 'Chivo', sans-serif;
+    font-size: large;
+    color: #86A873;
+    text-align: left;
 }
 
 .product-card {

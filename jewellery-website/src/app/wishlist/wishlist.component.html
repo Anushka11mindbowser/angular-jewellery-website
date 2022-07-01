@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-3" onclick="redirect()" *ngFor="let wl of wishlist ">
+    <div class="col-3" onclick="redirect()" *ngFor="let wl of wishlist1 ">
         <br>
         <div class="product-card">
             <img [src]="wl.image">
@@ -18,5 +18,10 @@
                 </p>
             </div>
         </div>
-        <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+
+        <div class="action">
+            <button class="btn btn-warning" (click)="cart(wl)"><i class="fa-solid fa-cart-plus"></i></button>
+            <div class="space"></div>
+            <button class="btn btn-warning" (click)="removeWishlist(wl)"><i class="fa-solid fa-minus"></i></button>
+        </div>
     </div>

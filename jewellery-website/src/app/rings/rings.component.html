@@ -16,22 +16,23 @@
             <div class="info">
                 <p>
 
-                    <br>Name: {{ring.name}}
-                    <br>Rs. {{ring.dp}}
-                    <br> Description: {{ring.note}}
+                    <br>Name:<span> {{ring.name}} </span>
+                    <br>Description: <span>{{ring.note}}</span>
+                    <br>Offers:<span> {{ring.offers}}</span>
+                    <br>Original Price: Rs. <span> {{ring.op}} </span>
 
 
 
                 </p>
             </div>
 
-            <button class="btb btn-primary" (click)="goToRings(ring)">View Details</button>
+            <button class="btn btn-primary" (click)="goToRings(ring)">View Details</button>
             <br>
             <br>
             <div class="action">
-                <button class="btn btn-warning"><i class="fa-solid fa-heart"></i></button>
+                <button class="btn btn-warning" (click)="wishlist(ring)"><i class="fa-solid fa-heart"></i></button>
                 <div class="space"></div>
-                <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="btn btn-warning" (click)="cart(ring)"><i class="fa-solid fa-cart-plus"></i></button>
             </div>
 
             <!-- 

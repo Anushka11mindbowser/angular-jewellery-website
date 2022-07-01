@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class GridJewelComponent implements OnInit {
   Rings:any
   singleEarring:any
 
-  constructor(private dataservice:DataService) { }
+  constructor(private dataservice:DataService, private router:Router) { }
 
   ngOnInit(): void {
     this.loadJewellery()
@@ -58,9 +59,39 @@ loadRings(){
   this.Rings=data)
 }
 
+wishlist(ring:any){
+  this.dataservice.addToWishlist(ring).subscribe(
+    (res: any) => {
+      console.log(res);
+    }
+  );
+
+  }
+
+cart(ring:any){
+  this.dataservice.addToCart(ring).subscribe((res:any)=>
+  {
+    console.log(res)
+  })
+};
 
 
+goToRings(ring:any){
+  this.router.navigateByUrl("/singlering/" + ring.id)
+}
 
+goToBracelets(bracelet:any){
+  this.router.navigateByUrl("/singlebracelet/" + bracelet.id)
+}
+
+
+goToNecklace(necklace:any){
+  this.router.navigateByUrl("/singlenecklace/" + necklace.id)
+}
+
+goToEarrings(earring:any){
+  this.router.navigateByUrl("/singleearring/" + earring.id)
+}
 
 
 }

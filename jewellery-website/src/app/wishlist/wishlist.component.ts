@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 export class WishlistComponent implements OnInit {
 
   constructor(private ds:DataService, private ar:ActivatedRoute) { }
-  wishlist:any
+  wishlist1:any
 
   ngOnInit(): void {
     this.loadWishlist()
@@ -17,11 +17,27 @@ export class WishlistComponent implements OnInit {
 
   loadWishlist(){
     this.ds.getWishlist().subscribe((data:{})=>
-    this.wishlist=data)
-    console.log(this.wishlist)
+    this.wishlist1=data)
+    console.log(this.wishlist1)
   }
   
+ 
 
+  cart(item:any){
+    this.ds.addToCart(item).subscribe((res:any)=>
+    {
+      console.log(res)
+    })
+  };
+
+  
+
+  removeWishlist(item:any){
+    this.ds.removeWishlistItem(item).subscribe((res:any)=>{
+      console.log(res)
+    })
+
+  }
 
 
 

@@ -5,6 +5,7 @@ import {Jewel} from 'src/app/Jewel';
 import { Earring} from 'src/app/Earring'
 import { Bracelet } from './Bracelet';
 import { ActivatedRoute } from '@angular/router';
+import { ReturnStatement } from '@angular/compiler';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DataService {
 
-
+ 
    
   j_url="http://localhost:3000/jewellery"
   b_url="http://localhost:3000/bracelets"
@@ -86,7 +87,12 @@ export class DataService {
     return this.http.get<any>(this.r_url + '/' + id)
    }
 
+   removeWishlistItem(item:any):Observable<any>{
+    return this.http.delete<any>(this.w_url + '/' + item.id) 
+   }
 
-
+   removeCartItem(item:any):Observable<any>{
+    return this.http.delete<any>(this.c_url + '/' + item.id) 
+   }
 
 }

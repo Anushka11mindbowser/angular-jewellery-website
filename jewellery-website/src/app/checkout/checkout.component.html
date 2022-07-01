@@ -1,1 +1,107 @@
-<p>checkout works!</p>
+<div class="checkout-page">
+    <div class="component">
+
+        <div class="card" style="width: 18rem;" *ngFor="let c of cart">
+            <img class="card-img-top" [src]="c.image" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{c.name}}</h5>
+                <p class="card-text">Cost: {{c.dp}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="space">
+
+        </div>
+
+    </div>
+    <div class="component2">
+        <div class="sub-section">
+            <h1>Coupons to be applied</h1>
+            <div class="coupon-box">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                  EAR00010
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                  NEC00020
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c3" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                  RIN00015
+                </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c4" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      BRC00025
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c5" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                     BRCRIN20
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c6" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      NECRIN25
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="c7" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                     EARNEC20
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-section">
+        <div class="card" style="max-width: 18rem;">
+            <div class="card-header">Original Order Summary</div>
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-4">Name:</div>
+                    <div class="col-4">Original Price</div>
+                    <div class="col-4">Discounted Price</div>
+
+                </div>
+
+                <div class="row" *ngFor="let c of cart">
+
+                    <div class="col-4">{{c.name}}</div>
+                    <div class="col-4">{{c.op}}</div>
+                    <div class="col-4">{{c.dp}}</div>
+                    <div class="col-4"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Checking Out
+            </div>
+            <div class="card-body" *ngFor="let c in cart">
+                <blockquote class="blockquote mb-0">
+                    <p>Coupon applied: </p>
+                    <p>Total Price:{{c}}} </p>
+                    <p> Discounted Price: </p>
+                    <p>You saved: </p>
+
+                    <footer class="blockquote-footer">Thank You for shopping with us <cite title="Source Title">Source Title</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+
+
+    </div>

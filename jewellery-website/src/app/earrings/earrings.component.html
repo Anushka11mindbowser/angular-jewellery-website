@@ -15,10 +15,12 @@
             <br>
             <div class="info">
                 <p>
+                    <br>Name:<span> {{earring.name}} </span>
+                    <br>Description: <span>{{earring.note}}</span>
+                    <br>Offers:<span> {{earring.offers}}</span>
+                    <br>Original Price: Rs. <span> {{earring.op}} </span>
 
-                    <br>Name: {{earring.name}}
-                    <br>Rs. {{earring.e_dp}}
-                    <br> Description: {{earring.note}}
+
 
 
 
@@ -29,9 +31,9 @@
             <br>
             <br>
             <div class="action">
-                <button class="btn btn-warning"><i class="fa-solid fa-heart"></i></button>
+                <button class="btn btn-warning" (click)="wishlist(earring)"><i class="fa-solid fa-heart"></i></button>
                 <div class="space"></div>
-                <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+                <button class="btn btn-warning" (click)="cart(earring)"><i class="fa-solid fa-cart-plus"></i></button>
             </div>
 
             <!-- 

@@ -1,4 +1,5 @@
 <div class="cart">
+    <div class="upper_section"></div>
     <div class="row">
 
         <div class="col-3" onclick="redirect()" *ngFor="let c of cart ">
@@ -19,11 +20,15 @@
                     </p>
                 </div>
             </div>
-            <button class="btn btn-warning"><i class="fa-solid fa-cart-plus"></i></button>
+            <div class="action">
+                <button class="btn btn-warning" (click)="cart(c)"><i class="fa-solid fa-cart-plus"></i></button>
+                <div class="space"></div>
+                <button class="btn btn-warning" (click)="removeCart(c)"><i class="fa-solid fa-minus"></i></button>
+            </div>
         </div>
 
 
     </div>
     <br>
-    <button class="btn btn-dark">Proceed To Checkout</button>
+    <button class="btn btn-dark" (click)="goToCheckout()">Proceed To Checkout</button>
 </div>

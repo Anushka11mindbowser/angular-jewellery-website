@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ds:DataService) { }
+
+  cart:any
+  op=0;
+  
+ 
+
+  cartItemsList:any=[]
+ 
+  
 
   ngOnInit(): void {
+  
+  this.loadCart()
+    
+    
+    
+    
+    
+
   }
 
+
+  loadCart(){
+    this.ds.getCart().subscribe((data)=>{
+      this.cart = data
+    })
+  }
+
+
+ 
+  
+   
+
+
+
+
 }
+

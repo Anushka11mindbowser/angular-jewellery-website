@@ -1,0 +1,32 @@
+.checkout-page {
+    display: flex;
+}
+
+.space {
+    width: 4px;
+    height: auto;
+    display: inline-block;
+}
+
+.component2 {
+    display: flex;
+    margin: 25px;
+    padding: 20px;
+}
+
+span {
+    color: cornflowerblue;
+    font-weight: 500;
+    font-size: larger;
+    font-family: monospace;
+}
+
+.col-4 {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.row {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}

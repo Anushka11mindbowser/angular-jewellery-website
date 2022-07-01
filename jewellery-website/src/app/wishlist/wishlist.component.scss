@@ -25,3 +25,24 @@ p {
     border: 2px solid white;
     background-color: aliceblue;
 }
+
+.action img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-top: "2px";
+    align-items: center;
+}
+
+.action btn {
+    display: flex;
+    margin: 25px;
+    padding: 25px;
+    align-items: flex-start;
+}
+
+.space {
+    width: 4px;
+    height: auto;
+    display: inline-block
+}

@@ -27,5 +27,12 @@ export class CartComponent implements OnInit {
     console.log(this.cart)
   }
 
+  removeCart(item:any){
+    this.ds.removeCartItem(item).subscribe((res:any)=>{
+      console.log(res)
+    })
+
+  }
+
  
 }

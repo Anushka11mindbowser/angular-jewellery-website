@@ -4,7 +4,7 @@
         <img [src]="bracelet.image" alt="">
         <br>
         <p>{{bracelet.name}}</p>
-    </div>
+    </div> 
 </div> -->
 <div id="grid-jewel">
     <div class="title">
@@ -31,22 +31,21 @@
                 <div class="info">
                     <p>
 
-                        {{bracelet.name}}
-                        <br>Rs. {{bracelet.dp}}
+
+                        <br>Name:<span> {{bracelet.name}} </span>
+                        <br>Description: <span>{{bracelet.note}}</span>
+
+                        <br>Original Price: Rs. <span> {{bracelet.op}} </span>
 
                     </p>
                 </div>
+                <button class="btn btn-primary" (click)="goToBracelets(bracelet)">View Details</button>
+                <br>
+                <br>
                 <div class="action">
-                    <a>
-                        <img src="/assets/wishlist.png">
-                        <!-- <p>Add to wishlist</p> -->
-                    </a>
-
-                    <a>
-                        <img src="/assets/shop.png">
-                        <!-- <p>Add to cart</p> -->
-                    </a>
-
+                    <button class="btn btn-warning" (click)="wishlist(bracelet)"><i class="fa-solid fa-heart"></i></button>
+                    <div class="space"></div>
+                    <button class="btn btn-warning" (click)="cart(bracelet)"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
             </div>
         </div>
@@ -61,21 +60,21 @@
                 <div class="info">
                     <p>
 
-                        {{necklace.name}}
-                        <br>Rs. {{necklace.dp}}
+
+                        <br>Name:<span> {{necklace.name}} </span>
+                        <br>Description: <span>{{necklace.note}}</span>
+
+                        <br>Original Price: Rs. <span> {{necklace.op}} </span>
 
                     </p>
                 </div>
+                <button class="btn btn-primary" (click)="goToNecklace(necklace)">View Details</button>
+                <br>
+                <br>
                 <div class="action">
-                    <a>
-                        <img src="/assets/wishlist.png">
-                        <!-- <p>Add to wishlist</p> -->
-                    </a>
-
-                    <a>
-                        <img src="/assets/shop.png">
-                        <!-- <p>Add to cart</p> -->
-                    </a>
+                    <button class="btn btn-warning" (click)="wishlist(necklace)"><i class="fa-solid fa-heart"></i></button>
+                    <div class="space"></div>
+                    <button class="btn btn-warning" (click)="cart(necklace)"><i class="fa-solid fa-cart-plus"></i></button>
 
                 </div>
             </div>
@@ -94,21 +93,20 @@
                 <div class="info">
                     <p>
 
-                        {{earring.name}}
-                        <br>Rs. {{earring.dp}}
+                        <br>Name:<span> {{earring.name}} </span>
+                        <br>Description: <span>{{earring.note}}</span>
+
+                        <br>Original Price: Rs. <span> {{earring.op}} </span>
 
                     </p>
                 </div>
+                <button class="btn btn-primary" (click)="goToEarrings(earring)">View Details</button>
+                <br>
+                <br>
                 <div class="action">
-                    <a>
-                        <img src="/assets/wishlist.png">
-                        <!-- <p>Add to wishlist</p> -->
-                    </a>
-
-                    <a>
-                        <img src="/assets/shop.png">
-                        <!-- <p>Add to cart</p> -->
-                    </a>
+                    <button class="btn btn-warning" (click)="wishlist(earring)"><i class="fa-solid fa-heart"></i></button>
+                    <div class="space"></div>
+                    <button class="btn btn-warning" (click)="cart(earring)"><i class="fa-solid fa-cart-plus"></i></button>
 
                 </div>
             </div>
@@ -127,22 +125,21 @@
                 <div class="info">
                     <p>
 
-                        {{ring.name}}
-                        <br>Rs. {{ring.dp}}
 
+                        <br>Name:<span> {{ring.name}} </span>
+                        <br>Description: <span>{{ring.note}}</span>
+
+                        <br>Original Price: Rs. <span> {{ring.op}} </span>
                     </p>
                 </div>
+                <button class="btn btn-primary" (click)="goToRings(ring)">View Details</button>
+                <br>
+                <br>
+
                 <div class="action">
-                    <a>
-                        <img src="/assets/wishlist.png">
-                        <!-- <p>Add to wishlist</p> -->
-                    </a>
-
-                    <a>
-                        <img src="/assets/shop.png">
-                        <!-- <p>Add to cart</p> -->
-                    </a>
-
+                    <button class="btn btn-warning" (click)="wishlist(ring)"><i class="fa-solid fa-heart"></i></button>
+                    <div class="space"></div>
+                    <button class="btn btn-warning" (click)="cart(ring)"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
             </div>
         </div>

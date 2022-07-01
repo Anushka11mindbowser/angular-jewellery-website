@@ -12,6 +12,7 @@ import { NecklacesComponent } from './necklaces/necklaces.component';
 import { RingsDetailsComponent } from './rings-details/rings-details.component';
 import { RingsComponent } from './rings/rings.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [{
   path:"singlejewel/:id", component: JewelleryDetailsComponent
@@ -53,7 +54,10 @@ const routes: Routes = [{
 },
 {
   path:"cart", component:CartComponent
-}];
+},
+{
+  path:"checkout", component:CheckoutComponent
+}]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

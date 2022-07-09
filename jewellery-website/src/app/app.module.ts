@@ -18,6 +18,8 @@ import { RingsDetailsComponent } from './rings-details/rings-details.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
     
   ],
   providers: [],

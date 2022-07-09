@@ -22,6 +22,7 @@ export class DataService {
   r_url = "http://localhost:3000/ring"
   w_url = "http://localhost:3000/wishlist"
   c_url = "http://localhost:3000/cart"
+  coupons_url = "http://localhost:3000/coupons"
 
   constructor(private http:HttpClient, private ar:ActivatedRoute) { }
   
@@ -93,6 +94,10 @@ export class DataService {
 
    removeCartItem(item:any):Observable<any>{
     return this.http.delete<any>(this.c_url + '/' + item.id) 
+   }
+
+   getCoupons():Observable<any>{
+    return this.http.get<any>(this.coupons_url)
    }
 
 }
